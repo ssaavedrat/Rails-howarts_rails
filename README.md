@@ -102,25 +102,38 @@ Este proyecto tiene como objetivo desarrollar una aplicación web que permita a 
    heroku create howarts-rails
    ```
 
-5. Despliega la aplicación en Heroku:
+5. Commit y push los cambios en git:
+
+   ```bash
+   git add .
+   git commit -m "Deploy to Heroku"
+   git push origin main
+   ```
+
+6. Despliega la aplicación en Heroku:
 
    ```bash
    git push heroku main
    ```
 
-6. Ejecuta las migraciones en Heroku:
+7. En Heroku, se debe agregar el complemento "Heroku Postgres" para la base de datos.
+
+8. Ejecuta las migraciones en Heroku y crea los datos de prueba:
 
    ```bash
    heroku run rails db:migrate
+   heroku run rails db:seed
    ```
 
-7. Abre la aplicación en tu navegador:
+9. Abre la aplicación en tu navegador:
 
    ```bash
    heroku open
    ```
 
 ¡Felicitaciones! Si has seguido todos los pasos, deberías ver la aplicación desplegada en Heroku.
+
+![Imagen de proyecto en heroku](image.png)
 
 ## Contribución
 
